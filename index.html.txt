@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FREE Webinar: Ghar Baithe Digital Seva Kendra Kaise Shuru Karein</title>
+<style>
+  :root{
+    --navy:#123A5C;
+    --navy-deep:#0B2740;
+    --saffron:#E8791A;
+    --green:#1E8449;
+    --cream:#FFF7EC;
+    --paper:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--cream);
+    color:var(--navy-deep);
+    line-height:1.5;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+
+  /* TOP BAR */
+  .topbar{
+    background:var(--navy-deep);
+    color:#F5C378;
+    text-align:center;
+    font-size:14px;
+    font-weight:700;
+    padding:9px 12px;
+    letter-spacing:0.3px;
+  }
+
+  /* HERO */
+  .hero{
+    background:var(--navy);
+    color:#fff;
+    padding:44px 0 60px 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;left:0;right:0;bottom:-1px;height:34px;
+    background:var(--saffron);
+    clip-path:polygon(0 40%,100% 0,100% 100%,0 100%);
+  }
+  .eyebrow{
+    display:inline-block;
+    background:rgba(232,121,26,0.18);
+    color:#F5C378;
+    border:1px solid var(--saffron);
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    padding:6px 14px;
+    border-radius:20px;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  .hero h1{
+    font-size:36px;
+    font-weight:900;
+    line-height:1.2;
+    max-width:680px;
+  }
+  .hero h1 span{color:var(--saffron);}
+  .hero p.sub{
+    margin-top:14px;
+    font-size:18px;
+    font-weight:600;
+    color:#DCE9F5;
+    max-width:600px;
+  }
+
+  /* COUNTDOWN */
+  .countdown{
+    display:flex;gap:12px;margin-top:26px;flex-wrap:wrap;
+  }
+  .cbox{
+    background:rgba(255,255,255,0.08);
+    border:1.5px solid rgba(255,255,255,0.3);
+    border-radius:10px;
+    padding:12px 16px;
+    text-align:center;
+    min-width:72px;
+  }
+  .cbox .num{font-size:26px;font-weight:900;color:var(--saffron);}
+  .cbox .lbl{font-size:11px;font-weight:700;letter-spacing:1px;color:#DCE9F5;text-transform:uppercase;}
+
+  /* FORM CARD */
+  .formcard{
+    background:var(--paper);
+    color:var(--navy-deep);
+    border-radius:16px;
+    padding:26px 24px;
+    margin-top:30px;
+    max-width:460px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+  }
+  .formcard h3{font-size:20px;font-weight:900;color:var(--navy);margin-bottom:4px;}
+  .formcard p.small{font-size:13.5px;color:#666;margin-bottom:16px;}
+  .field{margin-bottom:12px;}
+  .field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px;color:var(--navy);}
+  .field input{
+    width:100%;
+    padding:12px 14px;
+    border:1.5px solid #cfd8e0;
+    border-radius:8px;
+    font-size:15px;
+    font-family:inherit;
+  }
+  .field input:focus{outline:none;border-color:var(--green);}
+  .submit-btn{
+    width:100%;
+    background:#25D366;
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:800;
+    cursor:pointer;
+    margin-top:6px;
+  }
+  .submit-btn:hover{background:#1fb958;}
+  .privacy-note{font-size:12px;color:#888;margin-top:10px;text-align:center;}
+  .thankyou{
+    display:none;
+    background:#EAF7EE;
+    border:1.5px solid var(--green);
+    color:#155c31;
+    padding:16px;
+    border-radius:10px;
+    font-size:14.5px;
+    font-weight:700;
+    text-align:center;
+  }
+
+  /* SECTIONS */
+  .section{padding:50px 0;}
+  .section-title{
+    font-size:28px;
+    font-weight:900;
+    color:var(--navy);
+    display:flex;align-items:center;gap:12px;
+    margin-bottom:20px;
+  }
+  .section-title::before{
+    content:"";width:8px;height:26px;background:var(--saffron);display:inline-block;border-radius:2px;
+  }
+  .benefits{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .benefit{
+    background:var(--paper);
+    border-radius:10px;
+    padding:16px 18px;
+    font-size:15.5px;
+    font-weight:700;
+    border-left:6px solid var(--green);
+  }
+
+  .audience-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .audience-row span{
+    background:var(--navy);
+    color:#fff;
+    padding:9px 18px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:700;
+  }
+
+  .whyus{background:var(--navy-deep);color:#fff;}
+  .whyus .section-title{color:#fff;}
+  .whygrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  .whyitem{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:10px;
+    padding:14px 16px;
+    font-size:15px;
+    font-weight:700;
+  }
+  .whyitem b{color:var(--saffron);}
+
+  .cta-final{
+    background:var(--saffron);
+    border-radius:16px;
+    padding:32px 26px;
+    text-align:center;
+    color:#241700;
+  }
+  .cta-final h2{font-size:24px;font-weight:900;margin-bottom:10px;}
+  .cta-final a.btn{
+    display:inline-block;
+    background:#128C4A;
+    color:#fff;
+    padding:15px 30px;
+    border-radius:8px;
+    font-weight:800;
+    font-size:17px;
+    text-decoration:none;
+    margin-top:6px;
+  }
+
+  footer{background:var(--navy-deep);color:#cdd9e4;padding:26px 0;text-align:center;font-size:13.5px;}
+  footer b{color:#fff;}
+
+  @media(max-width:720px){
+    .hero h1{font-size:27px;}
+    .benefits{grid-template-columns:1fr;}
+    .whygrid{grid-template-columns:1fr;}
+    .formcard{max-width:100%;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">⚡ FREE Webinar — Seats Limited Hain, Abhi Register Karein</div>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Free Live Masterclass</div>
+      <h1>Ghar Baithe <span>Digital Seva Kendra</span> Kaise Shuru Karein</h1>
+      <p class="sub">Ek FREE live session me jaaniye — kaise ITR, GST, Passport Seva, Mini Bank jaisi services se ghar baithe ya apna khud ka centre kholkar mahine ki income shuru karein.</p>
+
+      <div class="countdown" id="countdown">
+        <div class="cbox"><div class="num" id="cd-days">--</div><div class="lbl">Din</div></div>
+        <div class="cbox"><div class="num" id="cd-hours">--</div><div class="lbl">Ghante</div></div>
+        <div class="cbox"><div class="num" id="cd-mins">--</div><div class="lbl">Minute</div></div>
+        <div class="cbox"><div class="num" id="cd-secs">--</div><div class="lbl">Second</div></div>
+      </div>
+
+      <div class="formcard" id="formcard">
+        <h3>🎟️ Apni FREE Seat Book Karein</h3>
+        <p class="small">Neeche apni details bharein — submit karte hi WhatsApp khulega aur aapki seat confirm ho jaayegi.</p>
+        <form id="regForm">
+          <div class="field">
+            <label for="name">Poora Naam</label>
+            <input type="text" id="name" required placeholder="Apna naam likhein">
+          </div>
+          <div class="field">
+            <label for="phone">WhatsApp Number</label>
+            <input type="tel" id="phone" required placeholder="10 digit mobile number" pattern="[0-9]{10}" maxlength="10">
+          </div>
+          <div class="field">
+            <label for="city">City</label>
+            <input type="text" id="city" required placeholder="Apna shehar likhein">
+          </div>
+          <button type="submit" class="submit-btn">📱 FREE Seat Book Karein</button>
+        </form>
+        <div class="thankyou" id="thankyou">✅ Dhanyawad! WhatsApp khul raha hai — apna message send kar dein, hum aapki seat confirm kar denge.</div>
+        <p class="privacy-note">Aapki details sirf webinar details bhejne ke liye use hongi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-title">Iss Webinar Me Kya Seekhenge</div>
+      <div class="benefits">
+        <div class="benefit">✔ Digital Seva Kendra kya hota hai aur kaise kaam karta hai</div>
+        <div class="benefit">✔ Kaun-kaun si services se income ho sakti hai (ITR, GST, Passport, DSC, CIBIL)</div>
+        <div class="benefit">✔ Bina bade investment ke ghar se kaise shuru karein</div>
+        <div class="benefit">✔ CSC / Mini Bank jaisi sarkari sewaon se judne ka rasta</div>
+        <div class="benefit">✔ Real example — kaise ek chhote centre se stable income banti hai</div>
+        <div class="benefit">✔ Live Q&amp;A — apne saare sawal seedha poochein</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff;padding-top:0;">
+    <div class="wrap">
+      <div class="section-title">Ye Webinar Kiske Liye Hai</div>
+      <div class="audience-row">
+        <span>👩‍🎓 Students</span>
+        <span>🏠 Housewives</span>
+        <span>🧑‍💼 Unemployed Youth</span>
+        <span>💼 Extra Income Chahne Waale</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section whyus">
+    <div class="wrap">
+      <div class="section-title">Hamari Khaasiyat</div>
+      <div class="whygrid">
+        <div class="whyitem"><b>✔</b> SBI Mini Bank Facility humare centre par</div>
+        <div class="whyitem"><b>✔</b> IIBF Examination Centre yaha sthaapit hai</div>
+        <div class="whyitem"><b>✔</b> ITR, GST, MSME, CIBIL, Passport, DSC — sab ek jagah</div>
+        <div class="whyitem"><b>✔</b> Sirf theory nahi — real business anubhav se training</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-final">
+        <h2>Seats Limited Hain — Abhi FREE Register Karein</h2>
+        <a class="btn" href="#formcard" onclick="document.getElementById('name').focus();">🎟️ Meri FREE Seat Book Karein</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p><b>Digital Seva &amp; Cyber Café Training</b></p>
+      <p>WhatsApp: 9412454105 &nbsp;|&nbsp; Address: ___________________</p>
+      <p style="margin-top:8px;">© 2026 — Sabhi seva ek hi jagah</p>
+    </div>
+  </footer>
+
+<script>
+  // ===== COUNTDOWN =====
+  // Default: counts down to 3 days from whenever the page is opened.
+  // To fix it to a specific real date/time, replace the line below with:
+  // const target = new Date("2026-09-01T18:00:00").getTime();
+  const target = new Date().getTime() + (3*24*60*60*1000);
+
+  function updateCountdown(){
+    const now = new Date().getTime();
+    let diff = target - now;
+    if(diff < 0) diff = 0;
+    const days = Math.floor(diff/(1000*60*60*24));
+    const hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+    const mins = Math.floor((diff%(1000*60*60))/(1000*60));
+    const secs = Math.floor((diff%(1000*60))/1000);
+    document.getElementById('cd-days').textContent = days;
+    document.getElementById('cd-hours').textContent = hours;
+    document.getElementById('cd-mins').textContent = mins;
+    document.getElementById('cd-secs').textContent = secs;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ===== FORM SUBMIT → OPENS WHATSAPP WITH LEAD DETAILS =====
+  const WHATSAPP_NUMBER = "919412454105"; // country code + number, no + or spaces
+
+  document.getElementById('regForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const city = document.getElementById('city').value.trim();
+
+    const msg = `Namaste, main FREE Webinar "Ghar Baithe Digital Seva Kendra Kaise Shuru Karein" ke liye register karna chahta/chahti hu.%0A%0ANaam: ${encodeURIComponent(name)}%0AWhatsApp: ${encodeURIComponent(phone)}%0ACity: ${encodeURIComponent(city)}`;
+
+    const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+
+    document.getElementById('thankyou').style.display = 'block';
+    window.open(waLink, '_blank');
+  });
+</script>
+
+</body>
+</html>
