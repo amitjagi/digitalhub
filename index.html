@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FREE Webinar: Ghar Baithe Digital Seva Kendra Kaise Shuru Karein</title>
+<title>Live Webinar: Ghar Baithe Digital Seva Kendra Kaise Shuru Karein</title>
 <style>
   :root{
     --navy:#123A5C;
@@ -12,6 +12,7 @@
     --green:#1E8449;
     --cream:#FFF7EC;
     --paper:#FFFFFF;
+    --red:#D22B2B;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{
@@ -84,9 +85,41 @@
     margin-right:auto;
   }
 
+  /* OFFER BANNER */
+  .offer-banner{
+    margin-top:26px;
+    background:linear-gradient(90deg,#FFE9C7,#FFF3E0);
+    border:2px dashed var(--saffron);
+    border-radius:14px;
+    padding:14px 22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
+    max-width:520px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow:0 8px 22px rgba(0,0,0,0.25);
+  }
+  .offer-icon{font-size:34px;}
+  .offer-text{text-align:left;color:#241700;}
+  .offer-text .otitle{font-size:13.5px;font-weight:800;color:var(--red);letter-spacing:0.5px;text-transform:uppercase;}
+  .offer-text .oprice{font-size:22px;font-weight:900;color:var(--green);display:flex;align-items:center;gap:10px;}
+  .offer-text .oprice .old{font-size:16px;font-weight:700;color:#9a3b3b;text-decoration:line-through;}
+  .offer-badge{
+    background:var(--red);
+    color:#fff;
+    font-size:12.5px;
+    font-weight:900;
+    padding:5px 10px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+
   /* COUNTDOWN */
   .countdown{
-    display:flex;gap:12px;margin-top:26px;flex-wrap:wrap;
+    display:flex;gap:12px;margin-top:22px;flex-wrap:wrap;
     justify-content:center;
   }
   .cbox{
@@ -112,7 +145,22 @@
     max-width:460px;
     box-shadow:0 10px 30px rgba(0,0,0,0.25);
     text-align:left;
+    position:relative;
   }
+  .price-strip{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    background:#FFF3E0;
+    border:1.5px solid var(--saffron);
+    border-radius:10px;
+    padding:10px 12px;
+    margin-bottom:16px;
+  }
+  .price-strip .old{font-size:16px;color:#a04b1a;text-decoration:line-through;font-weight:700;}
+  .price-strip .new{font-size:24px;color:var(--green);font-weight:900;}
+  .price-strip .save{font-size:12px;background:var(--green);color:#fff;padding:3px 8px;border-radius:12px;font-weight:800;}
   .formcard h3{font-size:20px;font-weight:900;color:var(--navy);margin-bottom:4px;text-align:center;}
   .formcard p.small{font-size:13.5px;color:#666;margin-bottom:16px;text-align:center;}
   .field{margin-bottom:12px;}
@@ -128,7 +176,7 @@
   .field input:focus{outline:none;border-color:var(--green);}
   .submit-btn{
     width:100%;
-    background:#25D366;
+    background:var(--green);
     color:#fff;
     border:none;
     padding:15px;
@@ -138,7 +186,7 @@
     cursor:pointer;
     margin-top:6px;
   }
-  .submit-btn:hover{background:#1fb958;}
+  .submit-btn:hover{background:#156e3a;}
   .privacy-note{font-size:12px;color:#888;margin-top:10px;text-align:center;}
   .thankyou{
     display:none;
@@ -217,6 +265,90 @@
     margin-top:6px;
   }
 
+  /* COURSE BENEFITS */
+  .coursegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .coursecard{
+    background:var(--paper);
+    border-radius:12px;
+    padding:20px 18px;
+    border-top:5px solid var(--saffron);
+    box-shadow:0 4px 14px rgba(0,0,0,0.06);
+  }
+  .coursecard .ctitle{
+    font-size:16.5px;
+    font-weight:900;
+    color:var(--navy);
+    margin-bottom:6px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .coursecard .ctitle .icon{font-size:22px;}
+  .coursecard p{font-size:14.5px;color:#444;font-weight:600;}
+
+  /* GALLERY - cyber cafe visuals */
+  .gallery-section{background:#fff;}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+  }
+  .gallery-card{
+    border-radius:14px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.10);
+    border:1px solid #eee;
+  }
+  .gallery-visual{
+    height:120px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:52px;
+  }
+  .gallery-card p{
+    padding:10px 8px;
+    font-size:13.5px;
+    font-weight:800;
+    color:var(--navy);
+    background:var(--paper);
+  }
+  .g1{background:linear-gradient(135deg,#FDEBD0,#F8C471);}
+  .g2{background:linear-gradient(135deg,#D6EAF8,#85C1E9);}
+  .g3{background:linear-gradient(135deg,#D5F5E3,#82E0AA);}
+  .g4{background:linear-gradient(135deg,#FADBD8,#F1948A);}
+
+  /* SERVICES */
+  .services-section{background:var(--navy);color:#fff;}
+  .services-section .section-title{color:#fff;}
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+  }
+  .service-card{
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:12px;
+    padding:18px 10px;
+    text-align:center;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .service-card:hover{background:rgba(255,255,255,0.14);transform:translateY(-2px);}
+  .service-card .sicon{
+    width:56px;height:56px;
+    line-height:56px;
+    background:linear-gradient(135deg,var(--saffron),#F5C378);
+    color:#241700;
+    border-radius:50%;
+    font-size:26px;
+    margin:0 auto 10px auto;
+    box-shadow:0 4px 10px rgba(0,0,0,0.25);
+  }
+  .service-card .sname{font-size:13.5px;font-weight:800;letter-spacing:0.2px;}
+
+  @media(max-width:720px){
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  }
+
   footer{background:var(--navy-deep);color:#cdd9e4;padding:26px 0;text-align:center;font-size:13.5px;}
   footer b{color:#fff;}
 
@@ -224,19 +356,31 @@
     .hero h1{font-size:27px;}
     .benefits{grid-template-columns:1fr;}
     .whygrid{grid-template-columns:1fr;}
+    .coursegrid{grid-template-columns:1fr;}
     .formcard{max-width:100%;}
+    .offer-banner{flex-direction:column;text-align:center;}
+    .offer-text{text-align:center;}
   }
 </style>
 </head>
 <body>
 
-  <div class="topbar">⚡ FREE Webinar — Seats Limited Hain, Abhi Register Karein</div>
+  <div class="topbar">⚡ Seats Limited Hain — Abhi Register Karein</div>
 
   <section class="hero">
     <div class="wrap">
-      <div class="eyebrow">Free Live Masterclass</div>
+      <div class="eyebrow">Live Masterclass</div>
       <h1>Ghar Baithe <span>Digital Seva Kendra</span> Kaise Shuru Karein</h1>
-      <p class="sub">Ek FREE live session me jaaniye — kaise ITR, GST, Passport Seva, Mini Bank jaisi services se ghar baithe ya apna khud ka centre kholkar mahine ki income shuru karein.</p>
+      <p class="sub">Ek Live session me jaaniye — kaise ITR, GST, Passport Seva, Mini Bank jaisi services se ghar baithe ya apna khud ka centre kholkar mahine ki income shuru karein.</p>
+
+      <!-- OFFER BANNER -->
+      <div class="offer-banner">
+        <div class="offer-icon">🎉</div>
+        <div class="offer-text">
+          <div class="otitle">🔥 Limited Time Offer</div>
+          <div class="oprice"><span class="old">₹3999</span> ₹399 <span class="offer-badge">90% OFF</span></div>
+        </div>
+      </div>
 
       <div class="countdown" id="countdown">
         <div class="cbox"><div class="num" id="cd-days">--</div><div class="lbl">Din</div></div>
@@ -246,8 +390,13 @@
       </div>
 
       <div class="formcard" id="formcard">
-        <h3>🎟️ Apni FREE Seat Book Karein</h3>
-        <p class="small">Neeche apni details bharein — submit karte hi WhatsApp khulega aur aapki seat confirm ho jaayegi.</p>
+        <div class="price-strip">
+          <span class="old">₹3999</span>
+          <span class="new">₹399</span>
+          <span class="save">Aaj Hi Bachaye ₹3600</span>
+        </div>
+        <h3>🎟️ Apni Seat Book Karein</h3>
+        <p class="small">Neeche apni details bharein — submit karte hi aap payment page par jaayenge, payment complete karte hi aapki seat confirm ho jaayegi.</p>
         <form id="regForm">
           <div class="field">
             <label for="name">Poora Naam</label>
@@ -261,10 +410,10 @@
             <label for="city">City</label>
             <input type="text" id="city" required placeholder="Apna shehar likhein">
           </div>
-          <button type="submit" class="submit-btn">📱 FREE Seat Book Karein</button>
+          <button type="submit" class="submit-btn">💳 Sirf ₹399 Me Seat Book Karein</button>
         </form>
-        <div class="thankyou" id="thankyou">✅ Dhanyawad! WhatsApp khul raha hai — apna message send kar dein, hum aapki seat confirm kar denge.</div>
-        <p class="privacy-note">Aapki details sirf webinar details bhejne ke liye use hongi.</p>
+        <div class="thankyou" id="thankyou">✅ Dhanyawad! Aap payment page par redirect ho rahe hain — payment complete karte hi aapki seat confirm ho jaayegi.</div>
+        <p class="privacy-note">Aapki details sirf webinar registration aur payment confirmation ke liye use hongi.</p>
       </div>
     </div>
   </section>
@@ -287,10 +436,79 @@
     <div class="wrap">
       <div class="section-title">Ye Webinar Kiske Liye Hai</div>
       <div class="audience-row">
+        <span>🧑‍💼 बेरोज़गार युवक (Unemployed Youth)</span>
+        <span>🖥️ Cyber Café Owners</span>
+        <span>🏠 House Wife</span>
         <span>👩‍🎓 Students</span>
-        <span>🏠 Housewives</span>
-        <span>🧑‍💼 Unemployed Youth</span>
-        <span>💼 Extra Income Chahne Waale</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--cream);">
+    <div class="wrap">
+      <div class="section-title">Course कोर्स क्यों ज्वाइन करें?</div>
+      <div class="coursegrid">
+        <div class="coursecard">
+          <div class="ctitle"><span class="icon">🖥️</span>100% Practical Training</div>
+          <p>प्रैक्टिकल ट्रेनिंग: लाइव पोर्टल पर Step by Step सिखाया जायेगा.</p>
+        </div>
+        <div class="coursecard">
+          <div class="ctitle"><span class="icon">💰</span>Low Investment Business</div>
+          <p>बहुत कम लागत में अपना काम शुरू करने का मौका.</p>
+        </div>
+        <div class="coursecard">
+          <div class="ctitle"><span class="icon">🤝</span>Life Time Support</div>
+          <p>काम करते वक़्त कोई प्रॉब्लम आये तो तुरंत समाधान.</p>
+        </div>
+        <div class="coursecard">
+          <div class="ctitle"><span class="icon">🎓</span>Certificate सर्टिफिकेट</div>
+          <p>ट्रेनिंग पूरी होने पर सर्टिफिकेट प्रदान किया जायेगा.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery-section">
+    <div class="wrap">
+      <div class="section-title">Hamara Setup — Cyber Café &amp; Digital Seva Centre</div>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="gallery-visual g1">🖥️</div>
+          <p>Computer &amp; Cyber Café Desk</p>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-visual g2">🖨️</div>
+          <p>Printer / Scanning Setup</p>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-visual g3">🏦</div>
+          <p>SBI Mini Bank Counter</p>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-visual g4">🛂</div>
+          <p>Passport Seva Kendra</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services-section">
+    <div class="wrap">
+      <div class="section-title">Services Jo Sikhaayi Jaayengi</div>
+      <div class="services-grid">
+        <div class="service-card"><div class="sicon">🖥️</div><div class="sname">Cyber Café Work</div></div>
+        <div class="service-card"><div class="sicon">🪪</div><div class="sname">PAN Card</div></div>
+        <div class="service-card"><div class="sicon">🧾</div><div class="sname">GST</div></div>
+        <div class="service-card"><div class="sicon">💰</div><div class="sname">PF</div></div>
+        <div class="service-card"><div class="sicon">📊</div><div class="sname">CIBIL</div></div>
+        <div class="service-card"><div class="sicon">🏭</div><div class="sname">MSME</div></div>
+        <div class="service-card"><div class="sicon">🏦</div><div class="sname">Bank CSP</div></div>
+        <div class="service-card"><div class="sicon">🛂</div><div class="sname">Passport</div></div>
+        <div class="service-card"><div class="sicon">✍️</div><div class="sname">Digital Signature</div></div>
+        <div class="service-card"><div class="sicon">📋</div><div class="sname">Govt Forms</div></div>
+        <div class="service-card"><div class="sicon">💡</div><div class="sname">Bill Payment</div></div>
+        <div class="service-card"><div class="sicon">➕</div><div class="sname">Many More</div></div>
       </div>
     </div>
   </section>
@@ -310,8 +528,8 @@
   <section class="section">
     <div class="wrap">
       <div class="cta-final">
-        <h2>Seats Limited Hain — Abhi FREE Register Karein</h2>
-        <a class="btn" href="#formcard" onclick="document.getElementById('name').focus();">🎟️ Meri FREE Seat Book Karein</a>
+        <h2>Sirf ₹399 Me Seat Book Karein — Offer Limited Hai</h2>
+        <a class="btn" href="#formcard" onclick="document.getElementById('name').focus();">🎟️ Meri Seat Book Karein</a>
       </div>
     </div>
   </section>
@@ -347,8 +565,8 @@
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  // ===== FORM SUBMIT → OPENS WHATSAPP WITH LEAD DETAILS =====
-  const WHATSAPP_NUMBER = "919412454105"; // country code + number, no + or spaces
+  // ===== FORM SUBMIT → SEND TO PAYMENT LINK =====
+  const PAYMENT_LINK = "https://rzp.io/rzp/S1Qa5Rs";
 
   document.getElementById('regForm').addEventListener('submit', function(e){
     e.preventDefault();
@@ -356,12 +574,16 @@
     const phone = document.getElementById('phone').value.trim();
     const city = document.getElementById('city').value.trim();
 
-    const msg = `Namaste, main FREE Webinar "Ghar Baithe Digital Seva Kendra Kaise Shuru Karein" ke liye register karna chahta/chahti hu.%0A%0ANaam: ${encodeURIComponent(name)}%0AWhatsApp: ${encodeURIComponent(phone)}%0ACity: ${encodeURIComponent(city)}`;
-
-    const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+    // (Optional) Save lead details locally before redirecting to payment.
+    // Razorpay Payment Links don't accept custom fields via URL by default,
+    // so name/phone/city are captured here for your own records if needed.
+    console.log("Lead captured:", { name, phone, city });
 
     document.getElementById('thankyou').style.display = 'block';
-    window.open(waLink, '_blank');
+
+    setTimeout(function(){
+      window.location.href = PAYMENT_LINK;
+    }, 900);
   });
 </script>
 
